@@ -2,7 +2,7 @@
 
 -- clientes
 CREATE TABLE clientes (
-  id          INT PRIMARY KEY, -- o id não pode se repetir, não pode ser Null
+  id          INT PRIMARY KEY, -- o id não pode se repetir
   cliente     VARCHAR(100),
   email       VARCHAR(255) NULL,
   cidade      VARCHAR(100),
@@ -14,7 +14,7 @@ CREATE TABLE clientes (
 CREATE TABLE produtos (
   id          INT PRIMARY KEY,
   produto     VARCHAR(100),
-  preco       DECIMAL(10,2)  -- armazenará números decimais, 10 dígitos e 2 casas decimais
+  preco       DECIMAL(10,2)  -- armazenará números decimais, 10 dígitos no total com 2 casas decimais
 );
 
 -- vendas
@@ -28,7 +28,7 @@ CREATE TABLE vendas (
 
 -- status vendas
 CREATE TABLE status_vendas (  
-  venda_id  INT REFERENCES vendas(id), -- esse valor deve corresponder a um id existente na tabela clientes 
+  venda_id  INT REFERENCES vendas(id), -- esse valor deve corresponder a um id existente na tabela vendas 
   data_status DATE,  
   status VARCHAR(20)  
 );
