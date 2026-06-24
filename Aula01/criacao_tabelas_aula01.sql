@@ -1,3 +1,5 @@
+-- CREATE DATABASE aula01;
+
 -- clientes
 CREATE TABLE clientes (
   id          INT PRIMARY KEY, -- o id não pode se repetir, não pode ser Null
