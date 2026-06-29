@@ -12,6 +12,15 @@ conexao = psycopg2.connect(
     port=DB_CONFIG["port"]
 )
 
+# conecta ao banco padrão postgres
+# conexao = psycopg2.connect(
+#     host="localhost",
+#     database="postgres",
+#     user="postgres",
+#     password="123456",
+#     port="5432"
+# )
+
 #O cursor é quem envia os comandos SQL e recebe os resultados.
 cursor = conexao.cursor()
 
